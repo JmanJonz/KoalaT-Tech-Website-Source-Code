@@ -1,0 +1,53 @@
+/* CSS precedence order from strongest to weakest: */
+/* 1. Styles marked with the !important keyword take priority over all else. */
+/* 2. Inline styles made using the style attribute take priority over all except for styles marked with !important keywords. */
+/* 3. Targeting an element through an ID attribute "#" takes next priority. */
+/* 4. Next in priority comes targeting an element through one of an elements class attributes ".". */
+/* 5. Then comes tag selectors */
+/* 6. Styles of the same precedence applied later take effect over styles applied earlier. */
+/* Remember only apply styles to an element and not a class if you won't those styles to apply to all the elements accross the whole site as all pages will be connected to the same stylesheets!*/
+
+/* Foundational small styles that set up all base styles for the whole website and designed first most for mobile devices. */
+/* ---------------- Home Page Styles --------------- */
+body{
+    background-color: white;
+}
+h1, h2, h3, h4, h5, h6, p, a{
+    font-family: Comfortaa,'Times New Roman', Times, serif;
+}
+/* Home Header */
+header{
+    background-color: #659dbd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-size: 40px;
+}
+header p{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+header p:nth-of-type(2){
+    color: #659dbd;
+}
+header div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header div img{
+    width: 150px;
+    margin-block: -5px;
+}
+header div h1{
+    margin-bottom: 4px;
+}
+header nav{
+    display: none;
+}
+/* Home main */
+main{
+    margin-top: 3px;
+    margin-inline: 3px;
+}
