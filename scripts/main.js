@@ -35,4 +35,4 @@ setTimeout(() => {
         }
     }
     animateImage();
-}, 2500);
+}, 1500);
