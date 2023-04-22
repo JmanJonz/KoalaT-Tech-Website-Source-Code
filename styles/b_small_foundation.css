@@ -26,7 +26,7 @@ picture.entrance source, picture.entrance img{
     object-fit: cover;
 }
 .entrance img.entrance_logo{
-    width: 100px;
+    width: 70px;
     position: absolute;
     top: 5px;
     left: 5px;
@@ -38,6 +38,12 @@ picture.entrance source, picture.entrance img{
     top: 35vh;
     left: 50vw;
     transform: translatex(-50%);
+    font-size: 2rem;
+    color: #659dbd;
+}
+.entrancetext h2{
+    font-size: 1.2rem;
+    margin-top: 8px;
 }
 /* Home Header */
 header{
