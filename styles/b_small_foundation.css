@@ -28,7 +28,7 @@ picture.entrance source, picture.entrance img{
 .entrance img.entrance_logo{
     width: 100px;
     position: absolute;
-    top: 40vh;
+    top: 30vh;
     left: 50vw;
     transform: translateX(-50%);}
 /* Home Header */
