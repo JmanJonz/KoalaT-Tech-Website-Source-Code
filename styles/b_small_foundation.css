@@ -31,6 +31,9 @@ picture.entrance source, picture.entrance img{
     top: 5px;
     left: 5px;
 }
+.entrance img.entrance_logo:hover{
+    transform: translatex(5px);
+}
 .entrancetext{
     position: absolute;
     text-align: center;
