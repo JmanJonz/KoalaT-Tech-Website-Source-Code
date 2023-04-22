@@ -26,9 +26,9 @@ picture.entrance source, picture.entrance img{
     object-fit: cover;
 }
 .entrance img.entrance_logo{
-    width: 70px;
+    width: 50px;
     position: absolute;
-    top: 5px;
+    bottom: 5px;
     left: 5px;
 }
 .entrance img.entrance_logo:hover{
