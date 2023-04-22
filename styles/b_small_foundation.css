@@ -28,9 +28,17 @@ picture.entrance source, picture.entrance img{
 .entrance img.entrance_logo{
     width: 100px;
     position: absolute;
-    top: 30vh;
+    top: 5px;
+    left: 5px;
+}
+.entrancetext{
+    position: absolute;
+    text-align: center;
+    width: 80vw;
+    top: 35vh;
     left: 50vw;
-    transform: translateX(-50%);}
+    transform: translatex(-50%);
+}
 /* Home Header */
 header{
     background-color: #659dbd;
