@@ -9,6 +9,13 @@
 
 /* Styles needed to alter the small foundational styles so that the website adapts to fit all screens larger than tablets and Ipads. */
 @media(min-width: 1001px){
-    /* ---------------- Home Page Styles --------------- */
-    
+    /* ---------------- Index Styles --------------- */
+    .BGLarge{
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+    .BGSmall, .BGMedium{
+        display: none;
+    }
 }
