@@ -11,14 +11,14 @@
     <meta name="description" content="Central website for KoalaT Tech. A web development business">
 
     <!-- Connecting this html page to stylesheets in cascading order -->
-    <link rel="stylesheet" href="styles/a_my_default.css">
-    <link rel="stylesheet" href="styles/b_small_foundation.css">
-    <link rel="stylesheet" href="styles/c_medium.css">
-    <link rel="stylesheet" href="styles/d_large.css">
+    <link rel="stylesheet" href="frontend/css/a_my_default.css">
+    <link rel="stylesheet" href="frontend/css/b_small_foundation.css">
+    <link rel="stylesheet" href="frontend/css/c_medium.css">
+    <link rel="stylesheet" href="frontend/css/d_large.css">
 
     <!-- Other links for styling etc. -->
-    <link rel="icon" href="images/Copy of final_logo_32px.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/final_logo_square_150px.png">
+    <link rel="icon" href="frontend/images/Copy of final_logo_32px.png" type="image/png">
+    <link rel="apple-touch-icon" href="frontend/images/final_logo_square_150px.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,17 +27,17 @@
 
     <!-- Connecting JS code to this html page and defering it's execution until after the elements of the page are build -->
     <script src="https://kit.fontawesome.com/8420ee9e5f.js" crossorigin="anonymous"></script>
-    <script defer src="scripts/main.js"></script>
+    <script defer src="frontend/js/index.js"></script>
 </head>
 
 <!-- For SEO it is really important to use proper html semantics and use descriptive, relevant, high seach volume key words to all elements starting with h1 heading and down. Even img alt tags and p text helps out but h1, h2, and down in order of importance for SEO -->
 <body>
     <div class="entrance">
         <picture class="entrance">
-            <source srcset="images/oentrancefoto_1900_compressed.png" media="(min-width: 800px)">
-            <img src="images/oentrancefoto_750_compressed.png" alt="Entrance Background">
+            <source srcset="frontend/images/oentrancefoto_1900_compressed.png" media="(min-width: 800px)">
+            <img src="frontend/images/oentrancefoto_750_compressed.png" alt="Entrance Background">
         </picture>
-        <img class="entrance_logo" src="images/Copy of final_logo_150px.png" alt="logo">
+        <img class="entrance_logo" src="frontend/images/Copy of final_logo_150px.png" alt="logo">
         <div class="entrancetext">
             <h1>KoalaT Tech</h1>
             <h2>Web & Software Development</h2>
@@ -46,7 +46,7 @@
     <header>
         <p>☰</p>
         <div>
-            <img src="images/final_logo_thin_150px.png" alt="logo">
+            <img src="frontend/images/final_logo_thin_150px.png" alt="logo">
         </div>
         <p class="header_spacer">☰</p>
         <nav>
@@ -63,8 +63,8 @@
     <main>
         <section class="hero">
             <picture>
-                <source media="(min-width: 1000px)" srcset="images/newhero3_2772_compressed.png">
-                <img src="images/newhero3_1900_compressed.png" alt="">
+                <source media="(min-width: 1000px)" srcset="frontend/images/newhero3_2772_compressed.png">
+                <img src="frontend/images/newhero3_1900_compressed.png" alt="">
             </picture>
         </section>
     </main>
