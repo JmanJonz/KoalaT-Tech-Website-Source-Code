@@ -71,6 +71,7 @@ header div{
     align-items: center;
 }
 header div img{
+    margin-inline: 8px;
     width: 60px;
     margin-block: -5px;
     margin-block: 10px;
