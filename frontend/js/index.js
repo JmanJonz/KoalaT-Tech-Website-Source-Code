@@ -1,4 +1,4 @@
-// Entrance page button functionality and instructions
+// Index Entrance page button functionality and instructions
 const entranceButton = document.querySelector(".entrance img.entrance_logo");
 entranceButton.style.zIndex = "1";
 const entrancepage = document.querySelector(".entrance");
@@ -36,3 +36,16 @@ setTimeout(() => {
     }
     animateImage();
 }, 1500);
+
+// Index main homepage functionality
+// open and close navigation
+const navBTN = document.querySelector(".navBTN");
+navBTN.addEventListener("click", ()=>{
+    const nav = document.querySelector("nav");
+    if(nav.style.display == "block"){
+        nav.style.display = "none";
+    }else if(nav.style.display == "none"){
+        nav.style.display = "block";
+    }
+    nav.style.display = "block";
+})

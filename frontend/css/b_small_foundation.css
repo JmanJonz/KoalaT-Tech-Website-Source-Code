@@ -76,6 +76,10 @@ header div img{
     margin-block: -5px;
     margin-block: 10px;
 }
+.navBTN:hover{
+    color: #bc986a;
+    cursor: pointer;
+}
 .actualH1{
     color: white;
 }
