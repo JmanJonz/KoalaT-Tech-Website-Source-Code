@@ -56,13 +56,12 @@ header{
     justify-content: space-between;
     color: white;
     font-size: 35px;
-    height: 60px;
+    height: 40px;
     padding-inline: 10px;
 }
 header p{
     order: 2;
-    margin-top: 10px;
-    margin-left: 10px;
+    padding-top: 3px;
 }
 header div{
     order: 0;
@@ -72,7 +71,7 @@ header div{
 }
 header div img{
     margin-inline: 8px;
-    width: 60px;
+    width: 50px;
     margin-block: -5px;
     margin-block: 10px;
 }
@@ -82,6 +81,8 @@ header div img{
 }
 .actualH1{
     color: white;
+    font-size: 25px;
+    padding-top: 3px;
 }
 header div h1{
     margin-bottom: 4px;
@@ -147,11 +148,13 @@ main{
         left: 0;
         z-index: -9;
     }
-    .index>h1{
+    .index>h2{
+        padding-top: 10px;
         color: #8d8741;
         text-align: center;
         margin-top: 15px;
         font-size: 40px;
         border-bottom: #8d8741 solid 2px;
-padding-bottom: 5px;    }
+        padding-bottom: 5px;    
+    }
     
