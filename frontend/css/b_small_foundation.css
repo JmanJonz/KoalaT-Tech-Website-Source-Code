@@ -91,7 +91,7 @@ header nav{
 }
 /* Home main */
 main{
-    margin-top: 3px;
+    margin-top: 0px;
     margin-inline: 3px;
 }
 
@@ -141,4 +141,17 @@ main{
         color: white;
     }
     /* For main */
+    .backgroundImage{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -9;
+    }
+    .index>h1{
+        color: #8d8741;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 40px;
+        border-bottom: #8d8741 solid 2px;
+padding-bottom: 5px;    }
     
