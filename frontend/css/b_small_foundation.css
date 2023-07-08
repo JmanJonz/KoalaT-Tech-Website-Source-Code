@@ -126,6 +126,8 @@ main{
         padding-block: 6px;
         text-align: center;
         margin-inline: 5px;
+        font-size: 28px;
+        padding-top: 12px;
     }
     .social_container{
         position: fixed;
@@ -138,3 +140,5 @@ main{
         margin: 4px;
         color: white;
     }
+    /* For main */
+    
