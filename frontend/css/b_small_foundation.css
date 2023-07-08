@@ -101,10 +101,21 @@ footer{
 }
 
 /* Index Styles */
-.BGSmall{
-    width: 100%;
-    height: 100vh;
-}
-.BGMedium, .BGLarge{
-    display: none;
-}
+    .BGSmall{
+        width: 100%;
+        height: 100vh;
+    }
+    .BGMedium, .BGLarge{
+        display: none;
+    }
+    /* for the navigation */
+    .navOpen{
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #8d8741;
+        transition: 3s;
+    }

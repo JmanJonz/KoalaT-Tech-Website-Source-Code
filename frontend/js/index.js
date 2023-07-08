@@ -40,12 +40,7 @@ setTimeout(() => {
 // Index main homepage functionality
 // open and close navigation
 const navBTN = document.querySelector(".navBTN");
-navBTN.addEventListener("click", ()=>{
-    const nav = document.querySelector("nav");
-    if(nav.style.display == "block"){
-        nav.style.display = "none";
-    }else if(nav.style.display == "none"){
-        nav.style.display = "block";
-    }
-    nav.style.display = "block";
+const nav = document.querySelector(".navigation");
+navBTN.addEventListener("click", function(){
+    nav.classList.toggle("navOpen");
 })
