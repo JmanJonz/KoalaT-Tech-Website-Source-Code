@@ -1,40 +1,20 @@
-// Index Entrance page button functionality and instructions
-const entranceButton = document.querySelector(".entrance img.entrance_logo");
-entranceButton.style.zIndex = "1";
-const entrancepage = document.querySelector(".entrance");
-const header = document.querySelector("header")
-const main = document.querySelector("main");
-const footer = document.querySelector("footer");
+// JS for index / home view
 
+// If the user navigates to the website and it has been a while send them to the entrance view, if it hasn't been more than 1 minutes since navigation don't redirect to navigation view
+// Check if entrance page has been visited before
+const hasVisitedEntrance = localStorage.getItem('hasVisitedEntrance');
+if (!hasVisitedEntrance) {
+  // Set flag in localStorage to indicate entrance page has been visited
+  window.location.href = "frontend/views/entrance.html";
+  localStorage.setItem('hasVisitedEntrance', 'true');
+} else {
+  // Redirect to the homepage if entrance page has been visited before
+  // Do nothing because we are already at the home page
+}
+// Set flag to false after 30 seconds
 setTimeout(() => {
-    const entrance_instructions = document.createElement("p");
-    entrance_instructions.textContent = "Click the koala to continue to site.";
-    entrancepage.append(entrance_instructions);
-    entrance_instructions.style.position = "absolute";
-    entrance_instructions.style.bottom = "22px";
-    entrance_instructions.style.left = "75px";
-    entrance_instructions.style.color = "#659dbd";
-    entrance_instructions.style.fontSize = "1.1rem";
-    entrance_instructions.style.marginTop = "6px";
-
-    let timesMoved = 0;
-    function animateImage(){
-        if (timesMoved < 250){
-            entranceButton.style.transform = `translatex(${timesMoved * 5}px)`;
-            timesMoved += 5;
-            setTimeout(() => {
-                requestAnimationFrame(animateImage);
-            }, 1000);
-        }
-    }
-    animateImage();
-}, 1500);
-entranceButton.addEventListener("click", ()=>{
-    entrancepage.style.display = "none";
-    header.style.display = "flex";
-    main.style.display = "block";
-    footer.style.display = "block";
-});
+    localStorage.setItem('hasVisitedEntrance', 'false');
+  }, 15000); // 30 seconds delay (30000 milliseconds)
 
 // Index main homepage functionality
 // open and close navigation

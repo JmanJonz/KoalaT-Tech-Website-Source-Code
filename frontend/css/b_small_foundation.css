@@ -51,7 +51,6 @@ picture.entrance source, picture.entrance img{
 /* Home Header */
 header{
     background-color: #659dbd;
-    display: none;
     flex-direction: row;
     justify-content: space-between;
     color: white;
@@ -91,14 +90,10 @@ header nav{
 }
 /* Home main */
 main{
-    display: none;
     margin-top: 3px;
     margin-inline: 3px;
 }
-/* Home Footer */
-footer{
-    display: none;
-}
+
 
 /* Index Styles */
     .BGSmall{
