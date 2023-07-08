@@ -6,13 +6,6 @@ const header = document.querySelector("header")
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 
-entranceButton.addEventListener("click", ()=>{
-    entrancepage.style.display = "none";
-    header.style.display = "flex";
-    main.style.display = "block";
-    footer.style.display = "block";
-});
-
 setTimeout(() => {
     const entrance_instructions = document.createElement("p");
     entrance_instructions.textContent = "Click the koala to continue to site.";
@@ -26,9 +19,9 @@ setTimeout(() => {
 
     let timesMoved = 0;
     function animateImage(){
-        if (timesMoved < 500){
+        if (timesMoved < 250){
             entranceButton.style.transform = `translatex(${timesMoved * 5}px)`;
-            timesMoved += 1;
+            timesMoved += 5;
             setTimeout(() => {
                 requestAnimationFrame(animateImage);
             }, 1000);
@@ -36,6 +29,12 @@ setTimeout(() => {
     }
     animateImage();
 }, 1500);
+entranceButton.addEventListener("click", ()=>{
+    entrancepage.style.display = "none";
+    header.style.display = "flex";
+    main.style.display = "block";
+    footer.style.display = "block";
+});
 
 // Index main homepage functionality
 // open and close navigation
