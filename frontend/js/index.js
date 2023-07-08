@@ -17,7 +17,7 @@ if (!hasVisitedEntrance || hasVisitedEntrance == false) {
 // Set flag to false after 30 seconds
 setTimeout(() => {
     localStorage.removeItem('hasVisitedEntrance');
-  }, 15000); // 30 seconds delay (30000 milliseconds)
+  }, 150000); // 60 seconds delay (30000 milliseconds)
 
 // Index main homepage functionality
 // open and close navigation
