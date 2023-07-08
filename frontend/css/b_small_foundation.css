@@ -112,10 +112,11 @@ footer{
     .navOpen{
         display: block;
         position: fixed;
-        left: 0;
+        left: -100%;
         top: 0;
         width: 100%;
         height: 100%;
         background-color: #8d8741;
         transition: 3s;
+        transform: translateX(100%);
     }
