@@ -50,6 +50,7 @@ picture.entrance source, picture.entrance img{
 }
 /* Home Header */
 header{
+    display: flex;
     background-color: #659dbd;
     flex-direction: row;
     justify-content: space-between;

@@ -1,5 +1,8 @@
 // JS for entrance View
 
+// used in index.js to check if it should display the entrance or not
+localStorage.setItem('hasVisitedEntrance', 'true');
+
 // Index Entrance page button functionality and instructions
 const entranceButton = document.querySelector(".entrance img.entrance_logo");
 entranceButton.style.zIndex = "1";

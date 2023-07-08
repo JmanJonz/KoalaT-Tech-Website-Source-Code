@@ -2,11 +2,14 @@
 
 // If the user navigates to the website and it has been a while send them to the entrance view, if it hasn't been more than 1 minutes since navigation don't redirect to navigation view
 // Check if entrance page has been visited before
-const hasVisitedEntrance = localStorage.getItem('hasVisitedEntrance');
-if (!hasVisitedEntrance) {
+let hasVisitedEntrance = localStorage.getItem('hasVisitedEntrance');
+if (hasVisitedEntrance == null || hasVisitedEntrance == ""){
+    hasVisitedEntrance = false;
+}
+console.log(hasVisitedEntrance);
+if (!hasVisitedEntrance || hasVisitedEntrance == false) {
   // Set flag in localStorage to indicate entrance page has been visited
   window.location.href = "frontend/views/entrance.html";
-  localStorage.setItem('hasVisitedEntrance', 'true');
 } else {
   // Redirect to the homepage if entrance page has been visited before
   // Do nothing because we are already at the home page
