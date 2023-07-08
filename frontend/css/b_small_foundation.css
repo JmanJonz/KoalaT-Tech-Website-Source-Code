@@ -112,10 +112,16 @@ main{
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: #fbeec1;
+        background-color: #659dbd;
         transition: 1.5s;
         transform: translateX(100%);
     }
     .navigation>a{
         display: block;
+        height: 50px;
+        color: white;
+        background-color: rgb(141, 135, 65, 0.5);
+        margin-block: 3px;
+        padding-block: 6px;
+        text-align: center;
     }
