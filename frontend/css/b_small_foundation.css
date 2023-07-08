@@ -131,4 +131,9 @@ main{
         bottom: 0;
         right: 0;
         color: blue;
+        margin-right: 7px;
+    }
+    .social_container>a{
+        margin: 4px;
+        color: white;
     }
