@@ -10,5 +10,10 @@
 /* Styles needed to alter the small foundational styles so that the website adapts to fit a medium sized screen for things like tablets and Ipads */
 @media(min-width: 600px) and (max-width: 1000px){
     /* ---------------- Index Styles --------------- */
-
+    .index>img{
+        width: 50px;
+    }
+    .index>h1{
+        font-size: 50px;
+    }
 }
