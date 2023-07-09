@@ -9,3 +9,43 @@
 
 /* Foundational small styles that set up all base styles for the whole website and designed first most for mobile devices. */
 /* ---------------- Index Styles --------------- */
+body{
+    background-color: #fbeec1;
+}
+.index>img{
+    width: 50px;
+    position: fixed;
+    top: 8px;
+    left: 8px;
+}
+.index>h1{
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 8px;
+    color: #659dbd;
+}
+.index>form{
+    display: flex;
+    margin-top: 20px;
+    margin-inline: auto;
+}
+.index>form>label{
+    display: block;
+    margin: 4px auto;
+}
+.index>form>label>input{
+    width: 75vw;
+    font-size: 20px;
+    background-color: #659dbd;
+    border: none;
+    color: white;
+}
+.index>form>label>input::placeholder{
+    color: white;
+}
+input:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: white; /* Set the desired border color on focus */
+  }
