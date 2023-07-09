@@ -28,6 +28,11 @@ async function getWeatherByLocation(locationn){
     // Grab the lat and long
     const lat = coordinatesData[0]["lat"];
     const long = coordinatesData[0]["lon"];
+    // Get weather data for those coordinates
+    const weatherResponse = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=ac915a6d1258935157073b6ba78cb9f4&units=imperial`);
+    const weatherData = await weatherResponse.json();
+    weatherDataString = JSON.stringify(weatherData);
+    weatherRenderContainer.innerHTML = weatherDataString;
 
 } getWeatherByLocation(locationn);
 
