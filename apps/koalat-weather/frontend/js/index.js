@@ -19,6 +19,15 @@ for (const [key, value] of searchParams) {
   params[key] = value;
 }
 
-console.log(params["location"]);
+const locationn = params["location"];
 // Perform further processing with the URL parameters
+async function getWeatherByLocation(locationn){
+    locationn = locationn.split(' ').join(',');
+    const coordinateResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${locationn}&appid=ac915a6d1258935157073b6ba78cb9f4`);
+    const coordinatesData = await coordinateResponse.json();
+    // Grab the lat and long
+    const lat = coordinatesData[0]["lat"];
+    const long = coordinatesData[0]["lon"];
+
+} getWeatherByLocation(locationn);
 
