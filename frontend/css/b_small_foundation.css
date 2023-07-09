@@ -116,6 +116,7 @@ main{
         background-color: #b2cede;
         transition: 1.5s;
         transform: translateX(100%);
+        padding-top: 5px;
     }
     .navigation>p{
         display: inline;
@@ -153,7 +154,7 @@ main{
         left: 0;
         z-index: -9;
     }
-    .index>h2{
+    .index>h2, .portfolio>h1{
         padding-top: 10px;
         color: #8d8741;
         text-align: center;
