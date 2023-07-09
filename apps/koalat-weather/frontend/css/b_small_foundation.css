@@ -37,6 +37,7 @@ body{
 }
 .index>form>label>input{
     width: 75vw;
+    height: 30px;
     font-size: 20px;
     background-color: #659dbd;
     border: none;
