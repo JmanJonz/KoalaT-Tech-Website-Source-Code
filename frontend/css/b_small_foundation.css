@@ -155,12 +155,30 @@ main{
         z-index: -9;
     }
     .index>h2, .portfolio>h1{
+        display: block;
         padding-top: 10px;
         color: #8d8741;
         text-align: center;
         margin-top: 15px;
+        width: auto;
+        margin-inline: auto;
         font-size: 40px;
         border-bottom: #8d8741 solid 2px;
         padding-bottom: 5px;    
     }
+/* portfolio views styles */
+.portfolioList{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.portfolioList>a{
+    display: block;
+    text-align: center;
+    background-color: #8d8741;
+    font-size: 25px;
+    padding-block: 8px;
+    color: white;
+    margin-block: 4px;
+}
     
