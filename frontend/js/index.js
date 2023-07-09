@@ -23,6 +23,10 @@ setTimeout(() => {
 // open and close navigation
 const navBTN = document.querySelector(".navBTN");
 const nav = document.querySelector(".navigation");
+const closeNavBTN = document.querySelector(".navigation>p");
 navBTN.addEventListener("click", function(){
     nav.classList.toggle("navOpen");
+})
+closeNavBTN.addEventListener("click", function(){
+  nav.classList.toggle("navOpen");
 })

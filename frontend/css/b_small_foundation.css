@@ -116,7 +116,11 @@ main{
         background-color: #b2cede;
         transition: 1.5s;
         transform: translateX(100%);
-        padding-top: 40px;
+    }
+    .navigation>p{
+        padding-left: 5px;
+        margin-block: 5px;
+        cursor: pointer;
     }
     .navigation>a{
         display: block;
