@@ -29,25 +29,32 @@ body{
     margin-top: 8px;
     color: #42667b; 
 }
-.index>form{
-    display: flex;
-    margin-top: 20px;
+.index>div>form{
     margin-inline: auto;
 }
-.index>form>label{
+.index>div>form>label{
     display: block;
     margin: 4px auto;
 }
-.index>form>label>input{
-    width: 75vw;
+.index>div>form>label>input{
+    min-width: 60vw;
+    max-width: 85vw;
+    width: auto;
+    display: block;
+    margin-inline: auto;
     height: 30px;
-    font-size: 20px;
+    font-size: 25px;
     background-color: #42667b;
     border: none;
     color: #fdf5da;
+    text-align: center;
+    font-weight: bold;
+    border: #fdf5da 1px solid;
 }
-.index>form>label>input::placeholder{
+.index>div>form>label>input::placeholder{
     color: #fdf5da;
+    font-size: 25px;
+    font-weight: bold;
 }
 input:focus {
     outline: none; /* Remove the default focus outline */
@@ -60,9 +67,20 @@ input:focus {
     width: 90vw;
     margin-inline: auto;
     margin-top: 30px;
+    padding: 5px;
+    
 }
 .weatherLocationTitle{
-    color: #42667b;
-    background-color: #fdf5da;
+    background-color: #42667b;
     font-size: 25px;
+    font-weight: lighter;
+    text-align: center;
+}
+.theWeatherContainer{
+    color: #42667b;
+    border: #42667b 4px solid;
+    width: 90vw;
+    margin: 10px auto;
+    padding: 5px;
+    min-height: 70vh;
 }
