@@ -69,14 +69,14 @@ header div{
     flex-direction: row;
     align-items: center;
 }
-header div img{
+header div a img{
     margin-inline: 8px;
     width: 50px;
     margin-block: -5px;
     margin-block: 10px;
 }
 .navBTN:hover{
-    color: #bc986a;
+    color: #aaa571;
     cursor: pointer;
 }
 .actualH1{
