@@ -24,7 +24,7 @@ body{
     text-align: center;
     font-size: 35px;
     margin-top: 8px;
-    color: #659dbd;
+    color: #42667b;
 }
 .index>form{
     display: flex;
@@ -39,7 +39,7 @@ body{
     width: 75vw;
     height: 30px;
     font-size: 20px;
-    background-color: #659dbd;
+    background-color: #42667b;
     border: none;
     color: white;
 }
