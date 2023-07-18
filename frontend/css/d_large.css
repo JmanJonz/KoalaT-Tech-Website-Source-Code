@@ -18,4 +18,13 @@
     .BGSmall, .BGMedium{
         display: none;
     }
+        /* Index and portfolio */
+        .portfolioList>a{
+            width: 75vw;
+            margin-inline: auto;
+        }
+        .index>h2, .portfolio>h1{
+            width: 75vw;
+            margin-inline: auto;
+        }
 }

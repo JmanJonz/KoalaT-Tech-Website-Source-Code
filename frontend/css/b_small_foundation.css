@@ -163,7 +163,7 @@ main{
         text-align: center;
         margin-top: 15px;
         width: auto;
-        margin-inline: auto;
+        margin-inline: 30px;
         font-size: 40px;
         border-bottom: #8d8741 solid 2px;
         padding-bottom: 5px;    
@@ -182,5 +182,6 @@ main{
     padding-block: 8px;
     color: white;
     margin-block: 4px;
+    margin-inline: 30px;
 }
     
