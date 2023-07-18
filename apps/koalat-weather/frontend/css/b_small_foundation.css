@@ -9,6 +9,9 @@
 
 /* Foundational small styles that set up all base styles for the whole website and designed first most for mobile devices. */
 /* ---------------- Index Styles --------------- */
+html{
+    color: #fdf5da;
+}
 body{
     background-color: #fdf5da;
 }
@@ -41,10 +44,10 @@ body{
     font-size: 20px;
     background-color: #42667b;
     border: none;
-    color: white;
+    color: #fdf5da;
 }
 .index>form>label>input::placeholder{
-    color: white;
+    color: #fdf5da;
 }
 input:focus {
     outline: none; /* Remove the default focus outline */
