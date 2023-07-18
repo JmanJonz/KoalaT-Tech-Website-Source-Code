@@ -2,6 +2,7 @@
 const locationForm = document.querySelector(".index>form");
 const locationInput = document.querySelector(".location");
 const weatherRenderContainer = document.querySelector(".weatherRenderContainer");
+const weatherLocationTitle = document.querySelector(".weatherLocationTitle");
 
 // make form submit upon clicking enter in input
 // locationInput.addEventListener("keypress", (event)=>{
@@ -18,6 +19,9 @@ const params = {};
 for (const [key, value] of searchParams) {
   params[key] = value;
 }
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 const locationn = params["location"];
 // Perform further processing with the URL parameters
@@ -32,7 +36,12 @@ async function getWeatherByLocation(locationn){
     const weatherResponse = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=ac915a6d1258935157073b6ba78cb9f4&units=imperial`);
     const weatherData = await weatherResponse.json();
     weatherDataString = JSON.stringify(weatherData);
-    weatherRenderContainer.innerHTML = weatherDataString;
+    // Get just the data I want to use
+
+    // Render in the data to the DOM
+    weatherLocationTitle.textContent = `Showing Weather For: ${capitalizeFirstLetter(locationn)}`;
+    weatherRenderContainer.insertAdjacentHTML = weatherDataString;
 
 } getWeatherByLocation(locationn);
+
 

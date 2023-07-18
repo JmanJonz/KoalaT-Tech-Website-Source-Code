@@ -23,7 +23,7 @@
     <script defer src="./frontend/js/index.js"></script>
 
 </head>
-
+ 
 <!-- For SEO it is really important to use proper html semantics and use descriptive, relevant, high seach volume key words to all elements starting with h1 heading and down. Even img alt tags and p text helps out but h1, h2, and down in order of importance for SEO -->
 <body>
     <header>
@@ -33,11 +33,11 @@
         <h1>KoalaT Weather</h1>
         <img src="./frontend/images/koalattech-logo-42667b-150px.png" alt="logo">
         <form action="." method="get">
-            <label><input id="location" name="location" type="text" placeholder="Enter Location: City State"></label>
-            <div class="weatherRenderContainer">
-
-            </div>
+            <label><input id="location" name="location" type="text" placeholder="Search Weather By City:"></label>
         </form>
+        <div class="weatherRenderContainer">
+            <h2 class="weatherLocationTitle"></h2>
+        </div>
         
     </main>
     <footer>

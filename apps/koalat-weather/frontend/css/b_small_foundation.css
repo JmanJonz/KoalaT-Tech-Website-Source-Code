@@ -27,7 +27,7 @@ body{
     text-align: center;
     font-size: 35px;
     margin-top: 8px;
-    color: #42667b;
+    color: #42667b; 
 }
 .index>form{
     display: flex;
@@ -53,3 +53,16 @@ input:focus {
     outline: none; /* Remove the default focus outline */
     border-color: white; /* Set the desired border color on focus */
   }
+  .weatherRenderContainer{
+    display: block;
+    background-color: #42667b;
+    border: #42667b 5px solid;
+    width: 90vw;
+    margin-inline: auto;
+    margin-top: 30px;
+}
+.weatherLocationTitle{
+    color: #42667b;
+    background-color: #fdf5da;
+    font-size: 25px;
+}
