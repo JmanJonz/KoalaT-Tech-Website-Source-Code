@@ -47,6 +47,7 @@ async function getWeatherByLocation(locationn){
       while(index < 4){
         let weatherSectionHTML = "<div class='weatherSection'>";
         weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
+        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F</p>`
         weatherSectionHTML +="</div>";
         threeHour.innerHTML += weatherSectionHTML;
         index += 1;
@@ -56,6 +57,7 @@ async function getWeatherByLocation(locationn){
       while(index < 12){
         let weatherSectionHTML = "<div class='weatherSection'>"
         weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
+        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F</p>`
         weatherSectionHTML +="</div>";
         sixHour.innerHTML += weatherSectionHTML;
         index += 2;
@@ -65,6 +67,7 @@ async function getWeatherByLocation(locationn){
       while(index < 36){
         let weatherSectionHTML = "<div class='weatherSection'>"
         weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
+        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F</p>`
         weatherSectionHTML +="</div>";
         twelveHour.innerHTML += weatherSectionHTML;
         index += 4;
