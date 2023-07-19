@@ -84,3 +84,13 @@ input:focus {
     padding: 5px;
     min-height: 70vh;
 }
+.threeHour, .sixHour, .twelveHour{
+    color: #42667b;
+    border: #42667b 4px solid;
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px;
+    text-decoration: underline;
+    font-size: 20px;
+    margin-bottom: 18px !important;
+}

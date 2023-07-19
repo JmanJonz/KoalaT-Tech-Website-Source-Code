@@ -7,6 +7,9 @@ const locationInput = document.querySelector("#location");
 const weatherRenderContainer = document.querySelector(".weatherRenderContainer");
 const weatherLocationTitle = document.querySelector(".weatherLocationTitle");
 const theWeatherContainer = document.querySelector(".theWeatherContainer");
+const threeHour = document.querySelector(".threeHour");
+const sixHour = document.querySelector(".sixHour");
+const twelveHour = document.querySelector(".twelveHour");
 
 // Grab the location and if valid use it to fetch weather data with api
 const url = new URL(window.location.href);
@@ -32,36 +35,41 @@ async function getWeatherByLocation(locationn){
     // Get weather data for those coordinates
     const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=ac915a6d1258935157073b6ba78cb9f4&units=imperial`);
     let weatherData = await weatherResponse.json();
-    // weatherDataArray = Object.keys(weatherData).map((key)=>weatherData[key]);
+    // grab the exact location name from search
+    const actualWeatherLocation = weatherData["city"]["name"] + ", " + weatherData["city"]["country"];
     weatherData = weatherData["list"];
 
     // Render in the data to the DOM
-    weatherLocationTitle.textContent = `${capitalizeFirstLetter(locationn)} - Weather`;
+    weatherLocationTitle.textContent = `${actualWeatherLocation} - Weather`;
+
       // Render weather for the next 12 hours every 3 hours
-      const threeHoursInSeconds = 10800
-      let hoursPast = 0;
       let index = 0;
-      let timestampTracker = weatherData[0]["dt"];
       while(index < 4){
-        console.log(weatherData[index]["dt"]);
-        console.log(unixTimestampToLocalDateTime(weatherData[index]["dt"]));
+        let weatherSectionHTML = "<div class='weatherSection'>";
+        weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
+        weatherSectionHTML +="</div>";
+        threeHour.innerHTML += weatherSectionHTML;
         index += 1;
       }
 
       // Render weather for the following 24 hours every 6 hours
       while(index < 12){
-        console.log(weatherData[index]["dt"]);
-        console.log(unixTimestampToLocalDateTime(weatherData[index]["dt"]));
+        let weatherSectionHTML = "<div class='weatherSection'>"
+        weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
+        weatherSectionHTML +="</div>";
+        sixHour.innerHTML += weatherSectionHTML;
         index += 2;
       }
 
       // Render weather for the following 72 hours every 12 hours.
       while(index < 36){
-        console.log(weatherData[index]["dt"]);
-        console.log(unixTimestampToLocalDateTime(weatherData[index]["dt"]));
+        let weatherSectionHTML = "<div class='weatherSection'>"
+        weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
+        weatherSectionHTML +="</div>";
+        twelveHour.innerHTML += weatherSectionHTML;
         index += 4;
       }
-} getWeatherByLocation(locationn);
+} if(locationn){getWeatherByLocation(locationn)};
 
 const originalPlaceholder = locationInput.getAttribute('placeholder');
 
