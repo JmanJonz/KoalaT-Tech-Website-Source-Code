@@ -90,7 +90,15 @@ input:focus {
     width: 90%;
     margin: 10px auto;
     padding: 5px;
-    text-decoration: underline;
     font-size: 20px;
-    margin-bottom: 18px !important;
+    margin-bottom: 12px !important;
+}
+.threeHour>h3, .sixHour>h3, .twelveHour>h3{
+    text-decoration: underline;
+    margin-bottom: 6px;
+}
+.weatherSection>h4{
+    text-decoration: none !important;
+    margin-bottom: 3px;
+    font-size: 18px;
 }
