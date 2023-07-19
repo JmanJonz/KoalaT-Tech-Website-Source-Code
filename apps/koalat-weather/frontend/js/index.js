@@ -1,4 +1,7 @@
 // JS for index / home view.
+// Import helper functions
+import { unixTimestampToLocalDateTime } from "../utilities/helper-functions.js";
+
 const locationForm = document.querySelector(".index>form");
 const locationInput = document.querySelector("#location");
 const weatherRenderContainer = document.querySelector(".weatherRenderContainer");
@@ -28,13 +31,36 @@ async function getWeatherByLocation(locationn){
     const long = coordinatesData[0]["lon"];
     // Get weather data for those coordinates
     const weatherResponse = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=ac915a6d1258935157073b6ba78cb9f4&units=imperial`);
-    const weatherData = await weatherResponse.json();
-    weatherDataString = JSON.stringify(weatherData);
-    // Get just the data I want to use
+    let weatherData = await weatherResponse.json();
+    // weatherDataArray = Object.keys(weatherData).map((key)=>weatherData[key]);
+    weatherData = weatherData["list"];
 
     // Render in the data to the DOM
     weatherLocationTitle.textContent = `${capitalizeFirstLetter(locationn)} - Weather`;
-    theWeatherContainer.innerHTML = weatherDataString;
+      // Render weather for the next 12 hours every 3 hours
+      const threeHoursInSeconds = 10800
+      let hoursPast = 0;
+      let index = 0;
+      let timestampTracker = weatherData[0]["dt"];
+      while(index < 4){
+        console.log(weatherData[index]["dt"]);
+        console.log(unixTimestampToLocalDateTime(weatherData[index]["dt"]));
+        index += 1;
+      }
+
+      // Render weather for the following 24 hours every 6 hours
+      while(index < 12){
+        console.log(weatherData[index]["dt"]);
+        console.log(unixTimestampToLocalDateTime(weatherData[index]["dt"]));
+        index += 2;
+      }
+
+      // Render weather for the following 72 hours every 12 hours.
+      while(index < 36){
+        console.log(weatherData[index]["dt"]);
+        console.log(unixTimestampToLocalDateTime(weatherData[index]["dt"]));
+        index += 4;
+      }
 } getWeatherByLocation(locationn);
 
 const originalPlaceholder = locationInput.getAttribute('placeholder');
