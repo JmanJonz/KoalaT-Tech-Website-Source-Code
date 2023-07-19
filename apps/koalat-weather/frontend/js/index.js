@@ -47,7 +47,8 @@ async function getWeatherByLocation(locationn){
       while(index < 4){
         let weatherSectionHTML = "<div class='weatherSection'>";
         weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
-        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F</p>`
+        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F and ${weatherData[index]["weather"][0]["description"]}.</p>`
+        weatherSectionHTML += `<img src='https://openweathermap.org/img/wn/${weatherData[index]["weather"][0]["icon"]}@2x.png' alt='Weather Icon'>`;
         weatherSectionHTML +="</div>";
         threeHour.innerHTML += weatherSectionHTML;
         index += 1;
@@ -57,7 +58,8 @@ async function getWeatherByLocation(locationn){
       while(index < 12){
         let weatherSectionHTML = "<div class='weatherSection'>"
         weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
-        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F</p>`
+        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F and ${weatherData[index]["weather"][0]["description"]}.</p>`
+                weatherSectionHTML += `<img src='https://openweathermap.org/img/wn/${weatherData[index]["weather"][0]["icon"]}@2x.png' alt='Weather Icon'>`;
         weatherSectionHTML +="</div>";
         sixHour.innerHTML += weatherSectionHTML;
         index += 2;
@@ -67,7 +69,8 @@ async function getWeatherByLocation(locationn){
       while(index < 36){
         let weatherSectionHTML = "<div class='weatherSection'>"
         weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
-        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F</p>`
+        weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F and ${weatherData[index]["weather"][0]["description"]}.</p>`
+                weatherSectionHTML += `<img src='https://openweathermap.org/img/wn/${weatherData[index]["weather"][0]["icon"]}@2x.png' alt='Weather Icon'>`;
         weatherSectionHTML +="</div>";
         twelveHour.innerHTML += weatherSectionHTML;
         index += 4;
