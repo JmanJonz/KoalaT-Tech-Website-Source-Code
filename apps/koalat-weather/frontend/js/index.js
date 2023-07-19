@@ -23,9 +23,11 @@ function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-const locationn = params["location"];
+let locationn = params["location"];
+
 // Perform further processing with the URL parameters
 async function getWeatherByLocation(locationn){
+    localStorage.setItem("locationn", locationn);
     locationn = locationn.split(' ').join(', ');
     const coordinateResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${locationn}&appid=ac915a6d1258935157073b6ba78cb9f4`);
     const coordinatesData = await coordinateResponse.json();
@@ -59,7 +61,7 @@ async function getWeatherByLocation(locationn){
         let weatherSectionHTML = "<div class='weatherSection'>"
         weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
         weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F and ${weatherData[index]["weather"][0]["description"]}.</p>`
-                weatherSectionHTML += `<img src='https://openweathermap.org/img/wn/${weatherData[index]["weather"][0]["icon"]}@2x.png' alt='Weather Icon'>`;
+        weatherSectionHTML += `<img src='https://openweathermap.org/img/wn/${weatherData[index]["weather"][0]["icon"]}@2x.png' alt='Weather Icon'>`;
         weatherSectionHTML +="</div>";
         sixHour.innerHTML += weatherSectionHTML;
         index += 2;
@@ -70,12 +72,17 @@ async function getWeatherByLocation(locationn){
         let weatherSectionHTML = "<div class='weatherSection'>"
         weatherSectionHTML += `<h4>${unixTimestampToLocalDateTime(weatherData[index]["dt"])}</h4>`
         weatherSectionHTML += `<p>Expected weather conditions are a temperature of ${weatherData[index]["main"]["temp"]}°F and ${weatherData[index]["weather"][0]["description"]}.</p>`
-                weatherSectionHTML += `<img src='https://openweathermap.org/img/wn/${weatherData[index]["weather"][0]["icon"]}@2x.png' alt='Weather Icon'>`;
+        weatherSectionHTML += `<img src='https://openweathermap.org/img/wn/${weatherData[index]["weather"][0]["icon"]}@2x.png' alt='Weather Icon'>`;
         weatherSectionHTML +="</div>";
         twelveHour.innerHTML += weatherSectionHTML;
         index += 4;
       }
-} if(locationn){getWeatherByLocation(locationn)};
+} 
+// If the user has entered in a city load the weather or if they have previously typed in a location load in weather for that city automatically
+if(!locationn){
+  locationn = localStorage.getItem("locationn");
+}
+if(locationn){getWeatherByLocation(locationn)};
 
 const originalPlaceholder = locationInput.getAttribute('placeholder');
 
