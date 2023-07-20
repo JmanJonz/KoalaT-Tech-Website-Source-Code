@@ -50,6 +50,8 @@ body{
     text-align: center;
     font-weight: bold;
     border: #fdf5da 1px solid;
+    padding-block: 8px;
+    margin-block: 20px;
 }
 .index>div>form>label>input::placeholder{
     color: #fdf5da;
