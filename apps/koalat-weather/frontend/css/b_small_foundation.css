@@ -51,7 +51,7 @@ body{
     font-weight: bold;
     border: #fdf5da 1px solid;
     padding-block: 8px;
-    margin-block: 20px;
+    margin-bottom: 20px;
 }
 .index>div>form>label>input::placeholder{
     color: #fdf5da;
@@ -77,6 +77,7 @@ input:focus {
     font-size: 25px;
     font-weight: lighter;
     text-align: center;
+    margin-top: 20px;
 }
 .theWeatherContainer{
     color: #42667b;
